@@ -1,0 +1,143 @@
+:root {
+    --cyprus: #003343;
+    --dove-gray: #646464;
+    --half-baked: #86BFD3;
+    --silver: #BCBCBC;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(Assets/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+}
+
+.header,
+.login {
+    min-height: 65vh;
+    max-width: 100vw;
+}
+
+.header {
+    background-color: var(--cyprus);
+    text-align: center;
+    color: var(--white);
+
+    background-image: url(Assets/iPhone\ Mockup.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.header__title {
+    padding-top: 40px;
+}
+
+.header__subtitle {
+    color: var(--half-baked);
+}
+
+.login {
+    background: var(--white);
+    padding: 20px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border: 1.5px var(--dove-gray);
+    border-radius: 0 0 10px 10px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__form__label {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 0 5px;
+}
+
+.login__form__input {
+    padding: 15px 10px;
+    border: 1px solid var(--silver);
+    border-radius: 5px;
+}
+
+.login__terms__checkbox {
+    align-self: flex-start;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.login__terms__link {
+    color: var(--cyprus);
+    font-weight: bold;
+    
+    text-decoration: none;
+    border-bottom: 2px solid var(--cyprus);
+    padding-bottom: 1px;
+    line-height: 1.5;
+}
+
+.login__button {
+    align-self: center;
+
+    padding: 10px 65px;
+    background-color: var(--cyprus);
+    border: none;
+    border-radius: 5px;
+
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .content {
+        padding: 150px;
+    }
+
+    .header,
+    .login {
+        min-height: 50vh;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        display: flex;
+    }
+
+    .header,
+    .login {
+        width: 50vh;
+        height: 65vh;
+    }
+
+    .header {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .login {
+        border-radius: 0 10px 10px 0;
+    }
+}
